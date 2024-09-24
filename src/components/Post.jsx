@@ -1,5 +1,5 @@
 function Post({
-  post: { id, titulo, url, descripcion, likes },
+  post: { id, titulo, url, descripcion, me_gusta },
   like,
   eliminarPost,
 }) {
@@ -18,10 +18,9 @@ function Post({
               <i
                 onClick={() => like(id)}
                 className={`fa-heart fa-xl ${
-                  likes ? "fa-solid" : "fa-regular"
+                  me_gusta ? "fa-solid" : "fa-regular"
                 }`}
               ></i>
-              <span className="ms-1">{likes}</span>
             </div>
             <i
               onClick={() => eliminarPost(id)}

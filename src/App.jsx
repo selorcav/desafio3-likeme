@@ -51,9 +51,9 @@ function App() {
           />
         </div>
         <div className="col-12 col-sm-8 px-5 row posts align-items-start">
-          {posts.map((post, i) => (
+          {posts.map((post) => (
             <Post
-              key={i}
+              key={post.id}
               post={post}
               like={like}
               eliminarPost={eliminarPost}
